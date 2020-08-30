@@ -1,0 +1,49 @@
+﻿@model EventHubViewer.App.Models.ConfigurationModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="c">
+    <div class="row">
+        <div class="12 col">
+            <h1>EventHub Configuration</h1>
+        </div>
+    </div>
+    <hr/>
+    <form method="POST" action="@Url.Action("UpdateSettings", "Configuration")">
+        <div class="row">
+            <div class="12 col">
+                <p class="mb-0">EventHub connection string</p>
+                <input class="card w-100" type="text" name="EventHubConnectionString" value="@(Model?.Configuration?.EventHubConnectionString ?? "")"/>
+                <small>You can find this by going to your EventHub in the Azure portal</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="6 col">
+                <p class="mb-0">EventHub Name</p>
+                <input class="card w-100" type="text" name="EvenHubName" value="@(Model?.Configuration?.EvenHubName ?? "")"/>
+            </div>
+            <div class="6 col">
+                <p class="mb-0">Consumer</p>
+                <input class="card w-100" type="text" value="$Default"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12 col">
+                <p class="mb-0">Blob Storage connection string</p>
+                <input class="card w-100" type="text" name="BlobStorageConnectionString" value="@(Model?.Configuration?.BlobStorageConnectionString ?? "")"/>
+            </div>
+            <div class="12 col">
+                <p class="mb-0">Blob Storage Container</p>
+                <input class="card w-100" type="text" name="BlobContainerName" value="@(Model?.Configuration?.BlobContainerName ?? "")"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="10 col"></div>
+            <div class="2 col">
+                <button class="btn primary" type="submit">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+﻿{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "lib": ["es2017", "dom"],
+    "removeComments": true,
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "js",
+    "rootDir": "ts"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

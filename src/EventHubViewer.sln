@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubViewer.App", "EventHubViewer.App\EventHubViewer.App.csproj", "{A089ED38-DA42-444C-A400-2DED69A2855C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHubViewer.Tests", "EventHubViewer.Tests\EventHubViewer.Tests.csproj", "{167B70B0-43B6-4E7B-8C8C-EEE89683EED5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A089ED38-DA42-444C-A400-2DED69A2855C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A089ED38-DA42-444C-A400-2DED69A2855C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A089ED38-DA42-444C-A400-2DED69A2855C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A089ED38-DA42-444C-A400-2DED69A2855C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167B70B0-43B6-4E7B-8C8C-EEE89683EED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167B70B0-43B6-4E7B-8C8C-EEE89683EED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167B70B0-43B6-4E7B-8C8C-EEE89683EED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167B70B0-43B6-4E7B-8C8C-EEE89683EED5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

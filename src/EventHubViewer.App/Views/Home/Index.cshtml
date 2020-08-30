@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Scripts
+{
+    <script asp-append-version="true" src="~/js/home.js"></script>
+}
+
+<div>
+    <div class="row">
+        <div class="8 col"></div>
+        <div class="2 col">
+            <p>Messaged Received: <strong id="message-counter">0</strong></p>
+        </div>
+        <div class="2 col">
+            <button id="message-pause" class="btn" type="button" onclick="togglePause()">Pause</button>
+            <button class="btn" type="button" onclick="clearMessages()">Clear</button>
+        </div>
+    </div>
+</div>
+
+<div id="eventhub-messages" class="messages">
+    
+</div>

@@ -1,0 +1,31 @@
+﻿@model EventHubViewer.App.Models.BaseModel;
+
+<!DOCTYPE html>
+
+<html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@(Model.Title ?? "EventHub Viewer")</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="~/css/lit.css"/>
+    <link rel="stylesheet" href="~/css/util.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="~/css/animate.min.css"/>
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+@Html.Partial("_Navbar")
+    @RenderBody()
+</body>
+
+<script language="JavaScript" src="~/js/signalr.min.js"></script>
+
+@RenderSection("Scripts", required: false)
+
+</html>

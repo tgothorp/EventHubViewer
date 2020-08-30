@@ -1,0 +1,16 @@
+{
+  "name": "eventhubviewer",
+  "version": "0.0.1",
+  "description": "Simple tool to receive and display messages via Microsoft Event Hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tgothorp",
+  "license": "ISC",
+  "dependencies": {
+    "@ajusa/lit": "^1.1.0",
+    "@microsoft/signalr": "^3.1.7",
+    "animate.css": "^4.1.0"
+  }
+}
