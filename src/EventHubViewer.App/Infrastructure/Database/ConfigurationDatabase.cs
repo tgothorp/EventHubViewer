@@ -40,7 +40,7 @@ namespace EventHubViewer.App.Infrastructure.Database
     public class Configuration : DatabaseObject
     {
         public string EventHubConnectionString { get; set; }
-        public string EvenHubName { get; set; }
+        public string EventHubName { get; set; }
 
         public string BlobStorageConnectionString { get; set; }
         public string BlobContainerName { get; set; }
@@ -54,7 +54,15 @@ namespace EventHubViewer.App.Infrastructure.Database
 
         public bool CheckConfigurationIsValid()
         {
-            // TODO
+            if (EventHubConnectionString == null
+                || EventHubName == null
+                || BlobStorageConnectionString == null
+                || BlobContainerName == null)
+            {
+                return false;
+            }
+
+            // TODO: need to add some better checking
             return true;
         }
         

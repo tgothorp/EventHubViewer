@@ -44,7 +44,7 @@ namespace EventHubViewer.App.Infrastructure.EventHub
 
             var consumerGroup = EventHubConsumerClient.DefaultConsumerGroupName;
             var storageClient = new BlobContainerClient(configuration.BlobStorageConnectionString, configuration.BlobContainerName);
-            var processor = new EventProcessorClient(storageClient, consumerGroup, configuration.EventHubConnectionString, configuration.EvenHubName);
+            var processor = new EventProcessorClient(storageClient, consumerGroup, configuration.EventHubConnectionString, configuration.EventHubName);
 
             processor.ProcessEventAsync += EventReceived;
             processor.ProcessErrorAsync += ErrorReceived;
