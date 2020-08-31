@@ -2,6 +2,8 @@
 
 This is a simple web based application to receive and display incoming events from [Azure Event Hubs.](https://azure.microsoft.com/en-gb/services/event-hubs/)
 
+![A screenshot of the home page](docs/home.png "Home")
+
 ## Getting Started
 
 The optimal way to get up and running quick is to use the latest [Docker image.](https://hub.docker.com/repository/docker/tomg/eventhubviewer) Simply run the following command in your terminal to grab and run the latest version.

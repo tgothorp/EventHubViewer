@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text;
 using Azure.Messaging.EventHubs.Processor;
+using EventHubViewer.App.Extensions;
 using EventHubViewer.App.Infrastructure.EventHub.Processors;
 
 namespace EventHubViewer.App.Infrastructure.EventHub
@@ -11,9 +13,14 @@ namespace EventHubViewer.App.Infrastructure.EventHub
             return GetProcessor(@event).Process(@event);
         }
 
-        private IMessageProcessor GetProcessor(ProcessEventArgs @eventArgs)
+        private IMessageProcessor GetProcessor(ProcessEventArgs @event)
         {
-            return new JsonMessageProcessor();
+            var rawMessage = Encoding.UTF8.GetString(@event.Data.Body.ToArray());
+            
+            if (rawMessage.IsValidJson())
+                return new JsonMessageProcessor();
+            
+            return new RawMessageProcessor();
         }
     }
 
@@ -29,7 +36,7 @@ namespace EventHubViewer.App.Infrastructure.EventHub
 
     public enum MessageFormat
     {
-        Raw,
+        Unknown,
         Json
     }
 }

@@ -4,6 +4,8 @@ connection.on("MessageReceived", function (message) {
     if (pauseMessages)
         return;
     incrementCounter();
+    if (message.messageFormat == 0)
+        processRawMessage(message);
     if (message.messageFormat == 1)
         processJsonMessage(message);
     let messageCount = document.querySelectorAll(".message-container").length;
@@ -47,6 +49,14 @@ function processJsonMessage(message) {
     }
     generateRaw(collapseData, message);
     jsonMessageList.insertBefore(messageContainer, jsonMessageList.firstChild);
+}
+function processRawMessage(message) {
+    let messageList = document.getElementById("eventhub-messages");
+    let messageContainer = document.createElement("div");
+    messageContainer.classList.add("message-container", "animate__fadeIn");
+    let collapseData = generateSummary(messageContainer, message, "Unknown");
+    generateRaw(collapseData, message);
+    messageList.insertBefore(messageContainer, messageList.firstChild);
 }
 function generateSummary(messageContainer, message, messageFormat) {
     let summaryContainer = document.createElement("div");
