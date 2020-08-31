@@ -20,7 +20,7 @@ namespace EventHubViewer.App.Controllers
         }
         
         // GET
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(new BaseModel("Home"));
         }

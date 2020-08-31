@@ -20,8 +20,8 @@
 </head>
 
 <body>
-@Html.Partial("_Navbar")
-    @RenderBody()
+@(await Html.PartialAsync("_Navbar"))
+@RenderBody()
 </body>
 
 <script language="JavaScript" src="~/js/signalr.min.js"></script>

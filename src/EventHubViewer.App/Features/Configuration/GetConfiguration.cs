@@ -16,9 +16,9 @@ namespace EventHubViewer.App.Features.Configuration
                 _configurationDatabase = configurationDatabase;
             }
             
-            public async Task<Infrastructure.Database.Configuration> Handle(GetConfiguration request, CancellationToken cancellationToken)
+            public Task<Infrastructure.Database.Configuration> Handle(GetConfiguration request, CancellationToken cancellationToken)
             {
-                return _configurationDatabase.GetConfiguration();
+                return Task.FromResult(_configurationDatabase.GetConfiguration());
             }
         }
     }
